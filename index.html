@@ -15,11 +15,11 @@
     <div class="header__top">
         <div class="container">
             <div class="header__top-inner">
-                <a href="http://www.liveastrology.org/" class="header__logo"><img src="images/header/logo.png" alt=""></a>
+                <a href="index.html" class="header__logo"><img src="images/header/logo.png" alt=""></a>
                 <nav class="nav">
-                    <a href="http://www.liveastrology.org/news.htm" class="nav__link">Библиотека</a>
-                    <a href="http://www.liveastrology.org/konsult.htm" class="nav__link">Консультации</a>
-                    <a href="http://www.liveastrology.org/feedback.htm" class="nav__link">О проекте</a>
+                    <a href="news.html" class="nav__link">Библиотека</a>
+                    <a href="konsult.html" class="nav__link">Консультации</a>
+                    <a href="feedback.html" class="nav__link">О проекте</a>
                 </nav>
                 <div class="burger"><span></span></div>
             </div>
@@ -28,9 +28,24 @@
     <div class="header__bot">
         <div class="container">
             <div class="header__bot-inner">
-                <div class="header__date">Четверг, день Юпитера, 24 декабря, 2020</div>
+                <div class="header__date">
+                <script>
+                    var mydate=new Date()
+                    var year=mydate.getYear()
+                    if (year < 1000)
+                        year+=1900
+                    var day=mydate.getDay()
+                    var month=mydate.getMonth()
+                    var daym=mydate.getDate()
+                    if (daym<10)
+                        daym="0"+daym
+                    var dayarray=new Array("&#1074;&#1086;&#1089;&#1082;&#1088;&#1077;&#1089;&#1077;&#1085;&#1100;&#1077;, &#1076;&#1077;&#1085;&#1100; &#1057;&#1086;&#1083;&#1085;&#1094;&#1072;","&#1087;&#1086;&#1085;&#1077;&#1076;&#1077;&#1083;&#1100;&#1085;&#1080;&#1082;, &#1076;&#1077;&#1085;&#1100; &#1051;&#1091;&#1085;&#1099;","&#1074;&#1090;&#1086;&#1088;&#1085;&#1080;&#1082;, &#1076;&#1077;&#1085;&#1100; &#1052;&#1072;&#1088;&#1089;&#1072;","&#1089;&#1088;&#1077;&#1076;&#1072;, &#1076;&#1077;&#1085;&#1100; &#1052;&#1077;&#1088;&#1082;&#1091;&#1088;&#1080;&#1103;","&#1095;&#1077;&#1090;&#1074;&#1077;&#1088;&#1075;, &#1076;&#1077;&#1085;&#1100; &#1070;&#1087;&#1080;&#1090;&#1077;&#1088;&#1072;","&#1087;&#1103;&#1090;&#1085;&#1080;&#1094;&#1072;, &#1076;&#1077;&#1085;&#1100; &#1042;&#1077;&#1085;&#1077;&#1088;&#1099;","&#1089;&#1091;&#1073;&#1073;&#1086;&#1090;&#1072;, &#1076;&#1077;&#1085;&#1100; &#1057;&#1072;&#1090;&#1091;&#1088;&#1085;&#1072;")
+                    var montharray=new Array("&#1103;&#1085;&#1074;&#1072;&#1088;&#1103;","&#1092;&#1077;&#1074;&#1088;&#1072;&#1083;&#1103;","&#1084;&#1072;&#1088;&#1090;&#1072;","&#1072;&#1087;&#1088;&#1077;&#1083;&#1103;","&#1084;&#1072;&#1103;","&#1080;&#1102;&#1085;&#1103;","&#1080;&#1102;&#1083;&#1103;","&#1072;&#1074;&#1075;&#1091;&#1089;&#1090;&#1072;","&#1089;&#1077;&#1085;&#1090;&#1103;&#1073;&#1088;&#1103;","&#1086;&#1082;&#1090;&#1103;&#1073;&#1088;&#1103;","&#1085;&#1086;&#1103;&#1073;&#1088;&#1103;","&#1076;&#1077;&#1082;&#1072;&#1073;&#1088;&#1103;")
+                    document.write("<small><font color='#FEFEFD' face='Verdana'><b>"+dayarray[day]+", "+daym+" "+montharray[month]+", "+year+"</b></font></small>")
+                </script>
+                </div>
                 <div class="header__img">
-                    <a class="header__link" href="http://www.liveastrology.org/"><img src="images/header/log_sky.png" alt=""></a>
+                    <a class="header__link" href="index.html"><img src="images/header/log_sky.png" alt=""></a>
                 </div>
             </div>
         </div>
@@ -64,22 +79,13 @@
                 </div>
                 <div class="main__item">
                     <div class="main__title">НАБЛЮДЕНИЯ</div>
-                    <a class="main__link" href="http://www.liveastrology.org/zvezdnoe_nebo.htm">Звёздная карта Pro</a>
-                    <a class="main__link" href="http://www.liveastrology.org/vechny_kalendar.htm">Вечный календарь</a>
-                    <a class="main__link" href="http://www.liveastrology.org/luna.htm">Луна-онлайн</a>
+                    <a class="main__link" href="zvezdnoe_nebo.html">Звёздная карта Pro</a>
+                    <a class="main__link" href="vechny_kalendar.html">Вечный календарь</a>
+                    <a class="main__link" href="luna.html">Луна-онлайн</a>
                 </div>
                 <div class="main__item">
                     <div class="main__title">ДЕНЬ СЕГОДНЯ</div>
-                    <div class="main__text">
-                        <img src="images/icons/Sun_18.gif" alt="">
-                        <span>Sun 3°3'58"</span>
-                        <img src="images/icons/Capricorn.gif" alt="">
-                    </div>
-                    <div class="main__text">
-                        <img src="images/icons/Moon_18.gif" alt="">
-                        <span>Moon 29°41'8"</span>
-                        <img src="images/icons/Aries.gif" alt="">
-                    </div>
+                    <iframe name="I4" src="Skripts/day/astroindex.php" frameborder="0" width="194" height="84" id="I4"></iframe>
                 </div>
             </div>
             
@@ -97,462 +103,463 @@
                     <div class="news__list">
                         <div class="news__item">
                             <div class="news__date">27.09.20</div>
-                            <a href="#" class="news__title news__title--new">Число зодиакальных созвездий</a>
+                            <a href="zodiac.html" class="news__title news__title--new">Число зодиакальных созвездий</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">09.09.20</div>
-                            <a href="#" class="news__title news__title--new">Млечный/Сожжённый Путь</a>
+                            <a href="milky_way_secrets.html" class="news__title news__title--new">Млечный/Сожжённый Путь</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">01.08.20</div>
-                            <a href="#" class="news__title news__title--new">Уран и погода, Фин-Эст</a>
+                            <a href="akg_pogoda_fi_ee.html" class="news__title news__title--new">Уран и погода, Фин-Эст</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">05.06.20</div>
-                            <a href="#" class="news__title news__title--new">За пределы домов</a>
+                            <a href="za_predely_domov.html" class="news__title news__title--new">За пределы домов</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">11.05.20</div>
-                            <a href="#" class="news__title news__title--new">О цикле Нептун-Плутон</a>
+                            <a href="neptun_pluton_skl.html" class="news__title news__title--new">О цикле Нептун-Плутон</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">09.05.20</div>
-                            <a href="#" class="news__title news__title--new">9 мая 1945</a>
+                            <a href="1945_mir.html" class="news__title news__title--new">9 мая 1945</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">08.04.20</div>
-                            <a href="#" class="news__title news__title--new">К-вирус и т.д. - интервью</a>
+                            <a href="https://news.ru/science/zapadnyj-astrolog-uvidel-plohie-predznamenovaniya-v-2020-visokosnom-godu/" class="news__title news__title--new">К-вирус и т.д. - интервью</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">07.04.20</div>
-                            <a href="#" class="news__title news__title--new">Эпидемии и астрология</a>
+                            <a href="corona_2019.html" class="news__title news__title--new">Эпидемии и астрология</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">09.01.20</div>
-                            <a href="#" class="news__title news__title--new">Развлекательный гороскоп 2020</a>
+                            <a href="2020_newsru.html" class="news__title news__title--new">Развлекательный гороскоп 2020</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">12.12.19</div>
-                            <a href="#" class="news__title news__title--new">Общий гороскоп 2020</a>
+                            <a href="2020_horoscope.html" class="news__title news__title--new">Общий гороскоп 2020</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">12.12.19</div>
-                            <a href="#" class="news__title">Меркурий - Солнце 2019</a>
+                            <a href="merc_sun_2019.html" class="news__title">Меркурий - Солнце 2019</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">1.10.19</div>
-                            <a href="#" class="news__title">Полигональная кладка</a>
+                            <a href="finland_polygonal.html" class="news__title">Полигональная кладка</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">7.08.19</div>
-                            <a href="#" class="news__title">О гороскопе России</a>
+                            <a href="russia_saturn.html" class="news__title">О гороскопе России</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">29.12.18</div>
-                            <a href="#" class="news__title">Общий гороскоп 2019</a>
+                            <a href="2019_horoscope.html" class="news__title">Общий гороскоп 2019</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">23.12.18</div>
-                            <a href="#" class="news__title">Цунами, Индонезия, АКГ</a>
+                            <a href="akg_tcunami_2018.html" class="news__title">Цунами, Индонезия, АКГ</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">23.12.18</div>
-                            <a href="#" class="news__title">Гибель дельфинов - АКГ</a>
+                            <a href="akg_delfin2018.html" class="news__title">Гибель дельфинов - АКГ</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">21.11.18</div>
-                            <a href="#" class="news__title">Гороскоп Ниена - СПб</a>
+                            <a href="nien_spb.html" class="news__title">Гороскоп Ниена - СПб</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">27.08.18</div>
-                            <a href="#" class="news__title">Венесуэла АКГ 2018</a>
+                            <a href="venezuela_2018.html" class="news__title">Венесуэла АКГ 2018</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">13.06.18</div>
-                            <a href="#" class="news__title">Кубок Мира 2018</a>
+                            <a href="worldcup2018.html" class="news__title">Кубок Мира 2018</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">11.04.18</div>
-                            <a href="#" class="news__title">Новая Москва - проекции</a>
+                            <a href="novaja_moskva_local.html" class="news__title">Новая Москва - проекции</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">23.12.17</div>
-                            <a href="#" class="news__title">Гороскоп 2018</a>
+                            <a href="2018_horoscope.html" class="news__title">Гороскоп 2018</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">9.02.17</div>
-                            <a href="#" class="news__title">Мифы китайского календаря</a>
+                            <a href="vostokgod_astrology.html" class="news__title">Мифы китайского календаря</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">2.01.17</div>
-                            <a href="#" class="news__title">Гороскоп 2017</a>
+                            <a href="2017_horoscope.html" class="news__title">Гороскоп 2017</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">1.12.16</div>
-                            <a href="#" class="news__title">Шахматы: Карлсен-Карякин</a>
+                            <a href="chess_2016.html" class="news__title">Шахматы: Карлсен-Карякин</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">25.07.16</div>
-                            <a href="#" class="news__title">Астрология и ядерные реакции</a>
+                            <a href="nuclear_astrology.html" class="news__title">Астрология и ядерные реакции</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">12.06.16</div>
-                            <a href="#" class="news__title">Взрыв в Минске, АКГ,1972</a>
+                            <a href="akg_minsk1972.html" class="news__title">Взрыв в Минске, АКГ,1972</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">11.05.16</div>
-                            <a href="#" class="news__title">Транзит Меркурия по Солнцу</a>
+                            <a href="mercury_sun.html" class="news__title">Транзит Меркурия по Солнцу</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">30.11.15</div>
-                            <a href="#" class="news__title">Развлекательный гороскоп 2016</a>
+                            <a href="2016.html" class="news__title">Развлекательный гороскоп 2016</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">28.09.15</div>
-                            <a href="#" class="news__title">Перспективы Украины</a>
+                            <a href="ukraina.html" class="news__title">Перспективы Украины</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">25.03.15</div>
-                            <a href="#" class="news__title">Астрология, мед. статистика</a>
+                            <a href="tatonetti.html" class="news__title">Астрология, мед. статистика</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">25.03.15</div>
-                            <a href="#" class="news__title">О Сергее Вронском</a>
+                            <a href="vronsky_rs.html" class="news__title">О Сергее Вронском</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">22.03.15</div>
-                            <a href="#" class="news__title">Астрогеография новолуний - 2</a>
+                            <a href="akg_new_moon1.html" class="news__title">Астрогеография новолуний - 2</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">18.02.15</div>
-                            <a href="#" class="news__title">О гороскопе Эстонии</a>
+                            <a href="estonia.html" class="news__title">О гороскопе Эстонии</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">17.01.15</div>
-                            <a href="#" class="news__title">Астрогеография и новолуния</a>
+                            <a href="akg_new_moon.html" class="news__title">Астрогеография и новолуния</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">13.01.15</div>
-                            <a href="#" class="news__title">Русское ТВ в Европе - прогноз</a>
+                            <a href="rustv_eu.html" class="news__title">Русское ТВ в Европе - прогноз</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">07.01.15</div>
-                            <a href="#" class="news__title">Фергюсон (США) и астрогеография</a>
+                            <a href="ferguson2014.html" class="news__title">Фергюсон (США) и астрогеография</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">18.12.14</div>
-                            <a href="#" class="news__title">Гороскоп для Финляндии 2015</a>
+                            <a href="2015_finland.html" class="news__title">Гороскоп для Финляндии 2015</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">12.12.14</div>
-                            <a href="#" class="news__title">Общий прогноз на 2015 год</a>
+                            <a href="2015.html" class="news__title">Общий прогноз на 2015 год</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">28.09.14</div>
-                            <a href="#" class="news__title">Осеннее равноденствие 2014</a>
+                            <a href="ing_libra.html" class="news__title">Осеннее равноденствие 2014</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">11.06.14</div>
-                            <a href="#" class="news__title">Кубок Мира по футболу 2014</a>
+                            <a href="worldcup2014.html" class="news__title">Кубок Мира по футболу 2014</a>
                         </div>
                         <div class="news__item">
                             <div class="news__date">2.05.14</div>
-                            <a href="#" class="news__title">Новые республики на Украине</a>
+                            <a href="republic_ukraine.html" class="news__title">Новые республики на Украине</a>
                             </div>
                         <div class="news__item">
                             <div class="news__date">12.02.14</div>
-                            <a href="#" class="news__title">Прогноз - хоккей ОИ 2014</a>
+                            <a href="2014_oi_hockey.html" class="news__title">Прогноз - хоккей ОИ 2014</a>
                         </div>
                         <div class="news__item">
-                        <div class="news__date">12.02.14</div>	<a href="#" class="news__title">Гороскоп ОИ 2014 в Сочи</a></div>
+                            <div class="news__date">12.02.14</div>
+                            <a href="2014_oi_sochi.html" class="news__title">Гороскоп ОИ 2014 в Сочи</a></div>
                         <div class="news__item">
-                        <div class="news__date">29.12.13</div>	<a href="#" class="news__title">Общий прогноз на 2014 год</a></div>
+                        <div class="news__date">29.12.13</div>	<a href="2014.html" class="news__title">Общий прогноз на 2014 год</a></div>
                         <div class="news__item">
-                        <div class="news__date">22.11.13</div>	<a href="#" class="news__title">О зенитах планет</a></div>
+                        <div class="news__date">22.11.13</div>	<a href="zenit.html" class="news__title">О зенитах планет</a></div>
                         <div class="news__item">
-                        <div class="news__date">9.11.13</div>	<a href="#" class="news__title">Солнечное затмение 3.11.2013</a></div>
+                        <div class="news__date">9.11.13</div>	<a href="2013_solar_eclipse.html" class="news__title">Солнечное затмение 3.11.2013</a></div>
                         <div class="news__item">
-                        <div class="news__date">8.08.13</div>	<a href="#" class="news__title">Эмбрион человека и Космос</a></div>
+                        <div class="news__date">8.08.13</div>	<a href="chelovek_cykles.html" class="news__title">Эмбрион человека и Космос</a></div>
                         <div class="news__item">
-                        <div class="news__date">15.06.13</div>	<a href="#" class="news__title">Склонение планет 1900-2200</a></div>
+                        <div class="news__date">15.06.13</div>	<a href="skl_pl.html" class="news__title">Склонение планет 1900-2200</a></div>
                         <div class="news__item">
-                        <div class="news__date">06.06.13</div>	<a href="#" class="news__title">Гороскоп полёта Гагарина</a></div>
+                        <div class="news__date">06.06.13</div>	<a href="kosmos_chelovek.html" class="news__title">Гороскоп полёта Гагарина</a></div>
                         <div class="news__item">
-                        <div class="news__date">12.05.13</div>	<a href="#" class="news__title">О лекции 30.05.2013</a></div>
+                        <div class="news__date">12.05.13</div>	<a href="astronews.htm" class="news__title">О лекции 30.05.2013</a></div>
                         <div class="news__item">
-                        <div class="news__date">04.03.13</div>	<a href="#" class="news__title">О кометах. Кто они?</a></div>
+                        <div class="news__date">04.03.13</div>	<a href="kometa_petuhov.html" class="news__title">О кометах. Кто они?</a></div>
                         <div class="news__item">
-                        <div class="news__date">10.02.13</div>	<a href="#" class="news__title">Плутон в гороскопе Москвы</a></div>
+                        <div class="news__date">10.02.13</div>	<a href="moskva_pluton.html" class="news__title">Плутон в гороскопе Москвы</a></div>
                         <div class="news__item">
-                        <div class="news__date">28.11.12</div>	<a href="#" class="news__title">Общий гороскоп 2013</a></div>
+                        <div class="news__date">28.11.12</div>	<a href="2013_all.html" class="news__title">Общий гороскоп 2013</a></div>
                         <div class="news__item">
-                        <div class="news__date">04.10.12</div>	<a href="#" class="news__title">Полнолуние - Турция и Сирия</a></div>
+                        <div class="news__date">04.10.12</div>	<a href="polnolunie_prognoz.html" class="news__title">Полнолуние - Турция и Сирия</a></div>
                         <div class="news__item">
-                        <div class="news__date">30.09.12</div>	<a href="#" class="news__title">О полнолунии 30.09.2012</a></div>
+                        <div class="news__date">30.09.12</div>	<a href="polnolunie.html" class="news__title">О полнолунии 30.09.2012</a></div>
                         <div class="news__item">
-                        <div class="news__date">27.08.12</div>	<a href="#" class="news__title">Гороскоп Москвы (расширение)</a></div>
+                        <div class="news__date">27.08.12</div>	<a href="moskva.html" class="news__title">Гороскоп Москвы (расширение)</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.08.12</div>	<a href="#" class="news__title">10 сентября 2012 в Хельсинки</a></div>
+                        <div class="news__date">11.08.12</div>	<a href="astronews.html" class="news__title">10 сентября 2012 в Хельсинки</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.08.12</div>	<a href="#" class="news__title">Греция, Крит</a></div>
+                        <div class="news__date">11.08.12</div>	<a href="krit.html" class="news__title">Греция, Крит</a></div>
                         <div class="news__item">
-                        <div class="news__date">09.06.12</div>	<a href="#" class="news__title">Прогноз ЧЕ 2012</a></div>
+                        <div class="news__date">09.06.12</div>	<a href="evro2012.html" class="news__title">Прогноз ЧЕ 2012</a></div>
                         <div class="news__item">
-                        <div class="news__date">09.06.12</div>	<a href="#" class="news__title">Обзор гороскопа ЧЕ 2012</a></div>
+                        <div class="news__date">09.06.12</div>	<a href="evro2012review.html" class="news__title">Обзор гороскопа ЧЕ 2012</a></div>
                         <div class="news__item">
-                        <div class="news__date">26.05.12</div>	<a href="#" class="news__title">Благоприятное время 2012-2014</a></div>
+                        <div class="news__date">26.05.12</div>	<a href="dating_time.html" class="news__title">Благоприятное время 2012-2014</a></div>
                         <div class="news__item">
-                        <div class="news__date">20.03.12</div>	<a href="#" class="news__title">Активность Зодиака 2012</a></div>
+                        <div class="news__date">20.03.12</div>	<a href="activity_2012.html" class="news__title">Активность Зодиака 2012</a></div>
                         <div class="news__item">
-                        <div class="news__date">26.12.11</div>	<a href="#" class="news__title">Майя - Новая Эра 2012</a></div>
+                        <div class="news__date">26.12.11</div>	<a href="2012_maya.html" class="news__title">Майя - Новая Эра 2012</a></div>
                         <div class="news__item">
-                        <div class="news__date">17.12.11</div>	<a href="#" class="news__title">Общий гороскоп 2012</a></div>
+                        <div class="news__date">17.12.11</div>	<a href="2012_all.html" class="news__title">Общий гороскоп 2012</a></div>
                         <div class="news__item">
-                        <div class="news__date">18.10.11</div>	<a href="#" class="news__title">Альбедо планет в астрологии</a></div>
+                        <div class="news__date">18.10.11</div>	<a href="albedo.html" class="news__title">Альбедо планет в астрологии</a></div>
                         <div class="news__item">
-                        <div class="news__date">08.09.11</div>	<a href="#" class="news__title">Взлет Як-42</a></div>
+                        <div class="news__date">08.09.11</div>	<a href="loco2011.html" class="news__title">Взлет Як-42</a></div>
                         <div class="news__item">
-                        <div class="news__date">13.07.11</div>	<a href="#" class="news__title">Выход из кризиса</a></div>
+                        <div class="news__date">13.07.11</div>	<a href="extra.html" class="news__title">Выход из кризиса</a></div>
                         <div class="news__item">
-                        <div class="news__date">13.07.11</div>	<a href="#" class="news__title">Как выйти из кризиса?</a></div>
+                        <div class="news__date">13.07.11</div>	<a href="extraout.html" class="news__title">Как выйти из кризиса?</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.06.11</div>	<a href="#" class="news__title">Затмение над Ванкувером</a></div>
+                        <div class="news__date">16.06.11</div>	<a href="vancouver_eclipse.html" class="news__title">Затмение над Ванкувером</a></div>
                         <div class="news__item">
-                        <div class="news__date">31.05.11</div>	<a href="#" class="news__title">Созвездие Близнецов</a></div>
+                        <div class="news__date">31.05.11</div>	<a href="my_sky_3.html" class="news__title">Созвездие Близнецов</a></div>
                         <div class="news__item">
-                        <div class="news__date">09.04.11</div>	<a href="#" class="news__title">Созвездие Тельца</a></div>
+                        <div class="news__date">09.04.11</div>	<a href="my_sky_2.html" class="news__title">Созвездие Тельца</a></div>
                         <div class="news__item">
-                        <div class="news__date">01.04.11</div>	<a href="#" class="news__title">Япония 2011</a></div>
+                        <div class="news__date">01.04.11</div>	<a href="2011_japan.html" class="news__title">Япония 2011</a></div>
                         <div class="news__item">
-                        <div class="news__date">27.02.11</div>	<a href="#" class="news__title">Активность Зодиака 2011</a></div>
+                        <div class="news__date">27.02.11</div>	<a href="activity_2011.html" class="news__title">Активность Зодиака 2011</a></div>
                         <div class="news__item">
-                        <div class="news__date">27.02.11</div>	<a href="#" class="news__title">Для чего нужен гороскоп?</a></div>
+                        <div class="news__date">27.02.11</div>	<a href="my_horoscope.html" class="news__title">Для чего нужен гороскоп?</a></div>
                         <div class="news__item">
-                        <div class="news__date">05.02.11</div>	<a href="#" class="news__title">Созвездие Весов</a></div>
+                        <div class="news__date">05.02.11</div>	<a href="my_sky_7.html" class="news__title">Созвездие Весов</a></div>
                         <div class="news__item">
-                        <div class="news__date">31.01.11</div>	<a href="#" class="news__title">О.Деркач и В.Быков</a></div>
+                        <div class="news__date">31.01.11</div>	<a href="view_os.html" class="news__title">О.Деркач и В.Быков</a></div>
                         <div class="news__item">
-                        <div class="news__date">23.01.11</div>	<a href="#" class="news__title">Циклы идей в Зодиаке</a></div>
+                        <div class="news__date">23.01.11</div>	<a href="zodiac_cykles.html" class="news__title">Циклы идей в Зодиаке</a></div>
                         <div class="news__item">
-                        <div class="news__date">23.12.10</div>	<a href="#" class="news__title">Созвездие Козерога</a></div>
+                        <div class="news__date">23.12.10</div>	<a href="my_sky_10.html" class="news__title">Созвездие Козерога</a></div>
                         <div class="news__item">
-                        <div class="news__date">8.12.10</div>	<a href="#" class="news__title">Созвездие Овна ч.1 и ч.2</a></div>
+                        <div class="news__date">8.12.10</div>	<a href="my_sky_1.html" class="news__title">Созвездие Овна ч.1 и ч.2</a></div>
                         <div class="news__item">
-                        <div class="news__date">19.11.10</div>	<a href="#" class="news__title">Созвездие Краба (Рака)</a></div>
+                        <div class="news__date">19.11.10</div>	<a href="my_sky_4.html" class="news__title">Созвездие Краба (Рака)</a></div>
                         <div class="news__item">
-                        <div class="news__date">15.11.10</div>	<a href="#" class="news__title">Китайский Зодиак</a></div>
+                        <div class="news__date">15.11.10</div>	<a href="zodiac_china.html" class="news__title">Китайский Зодиак</a></div>
                         <div class="news__item">
-                        <div class="news__date">10.11.10</div>	<a href="#" class="news__title">Общий гороскоп 2011</a></div>
+                        <div class="news__date">10.11.10</div>	<a href="2011_all.html" class="news__title">Общий гороскоп 2011</a></div>
                         <div class="news__item">
-                        <div class="news__date">09.11.10</div>	<a href="#" class="news__title">Панорама Зодиака</a></div>
+                        <div class="news__date">09.11.10</div>	<a href="zodiac_zvezdy.html" class="news__title">Панорама Зодиака</a></div>
                         <div class="news__item">
-                        <div class="news__date">24.10.10</div>	<a href="#" class="news__title">Лапландское послесловие</a></div>
+                        <div class="news__date">24.10.10</div>	<a href="kino_lapland+.html" class="news__title">Лапландское послесловие</a></div>
                         <div class="news__item">
-                        <div class="news__date">14.10.10</div>	<a href="#" class="news__title">Фокусы Фроули</a></div>
+                        <div class="news__date">14.10.10</div>	<a href="frawley_focus.html" class="news__title">Фокусы Фроули</a></div>
                         <div class="news__item">
-                        <div class="news__date">14.10.10</div>	<a href="#" class="news__title">Расчет темпераментов по Фроули</a></div>
+                        <div class="news__date">14.10.10</div>	<a href="temperament_pn_jw.html" class="news__title">Расчет темпераментов по Фроули</a></div>
                         <div class="news__item">
-                        <div class="news__date">26.09.10</div>	<a href="#" class="news__title">Земля как Тело</a></div>
+                        <div class="news__date">26.09.10</div>	<a href="zemlja.html" class="news__title">Земля как Тело</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.09.10</div>	<a href="#" class="news__title">Карта Луны</a></div>
+                        <div class="news__date">16.09.10</div>	<a href="www/luna_map.html" class="news__title">Карта Луны</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.09.10</div>	<a href="#" class="news__title">11 (экадаши) и 29 лунный день</a></div>
+                        <div class="news__date">11.09.10</div>	<a href="luna_ekadasa.html" class="news__title">11 (экадаши) и 29 лунный день</a></div>
                         <div class="news__item">
-                        <div class="news__date">3.09.10</div>Раз<a href="#" class="news__title">говор о Васту</a></div>
+                        <div class="news__date">3.09.10</div> <a href="vastu_ganapati.html" class="news__title">Разговор о Васту</a></div>
                         <div class="news__item">
-                        <div class="news__date">25.08.10</div>	<a href="#" class="news__title">Цена золота 2010  прогноз</a></div>
+                        <div class="news__date">25.08.10</div>	<a href="zoloto2010.html" class="news__title">Цена золота 2010  прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">4.08.10</div>	<a href="#" class="news__title">КИВИН 2010  репортаж</a></div>
+                        <div class="news__date">4.08.10</div>	<a href="jurmala_2010.html" class="news__title">КИВИН 2010  репортаж</a></div>
                         <div class="news__item">
-                        <div class="news__date">20.07.10</div>	<a href="#" class="news__title">Интеллект, игра, юмор</a></div>
+                        <div class="news__date">20.07.10</div>	<a href="unique_destiny_3.html" class="news__title">Интеллект, игра, юмор</a></div>
                         <div class="news__item">
-                        <div class="news__date">14.07.10</div>	<a href="#" class="news__title">Книга Емели  (Ветхий Завет, пер.)</a></div>
+                        <div class="news__date">14.07.10</div>	<a href="emelian_book.html" class="news__title">Книга Емели  (Ветхий Завет, пер.)</a></div>
                         <div class="news__item">
-                        <div class="news__date">20.06.10</div>	<a href="#" class="news__title">Лунные дни  справочные сведения</a></div>
+                        <div class="news__date">20.06.10</div>	<a href="luna_dni.html" class="news__title">Лунные дни  справочные сведения</a></div>
                         <div class="news__item">
-                        <div class="news__date">14.06.10</div>	<a href="#" class="news__title">Кубок Мира по футболу 2010</a></div>
+                        <div class="news__date">14.06.10</div>	<a href="worldcup2010.html" class="news__title">Кубок Мира по футболу 2010</a></div>
                         <div class="news__item">
-                        <div class="news__date">5.06.10</div>	<a href="#" class="news__title">Туристический гороскоп</a></div>
+                        <div class="news__date">5.06.10</div>	<a href="travel_signs.html" class="news__title">Туристический гороскоп</a></div>
                         <div class="news__item">
-                        <div class="news__date">3.05.10</div>	<a href="#" class="news__title">Секреты гороскопа Николая II</a></div>
+                        <div class="news__date">3.05.10</div>	<a href="directions.html" class="news__title">Секреты гороскопа Николая II</a></div>
                         <div class="news__item">
-                        <div class="news__date">30.04.10</div>	<a href="#" class="news__title">О Луне в хораре</a></div>
+                        <div class="news__date">30.04.10</div>	<a href="horar_luna.html" class="news__title">О Луне в хораре</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.04.10</div>	<a href="#" class="news__title">Марс будит Исландию</a></div>
+                        <div class="news__date">16.04.10</div>	<a href="island_volcano2010.html" class="news__title">Марс будит Исландию</a></div>
                         <div class="news__item">
-                        <div class="news__date">13.04.10</div>	<a href="#" class="news__title">ЧР по футболу 2010</a></div>
+                        <div class="news__date">13.04.10</div>	<a href="rf_2010.html" class="news__title">ЧР по футболу 2010</a></div>
                         <div class="news__item">
-                        <div class="news__date">03.03.10</div>	<a href="#" class="news__title">Знакомства в сети</a></div>
+                        <div class="news__date">03.03.10</div>	<a href="astrodating.html" class="news__title">Знакомства в сети</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.02.10</div>	<a href="#" class="news__title">Активность Зодиака 2010</a></div>
+                        <div class="news__date">16.02.10</div>	<a href="activity_2010.html" class="news__title">Активность Зодиака 2010</a></div>
                         <div class="news__item">
-                        <div class="news__date">12.02.10</div>	<a href="#" class="news__title">Судьба Наполеона</a></div>
+                        <div class="news__date">12.02.10</div>	<a href="napoleon_st_helena.html" class="news__title">Судьба Наполеона</a></div>
                         <div class="news__item">
-                        <div class="news__date">06.01.10</div>	<a href="#" class="news__title">О цикле Юпитер-Сатурн</a></div>
+                        <div class="news__date">06.01.10</div>	<a href="jupiter_saturn.html" class="news__title">О цикле Юпитер-Сатурн</a></div>
                         <div class="news__item">
-                        <div class="news__date">31.12.09</div>	<a href="#" class="news__title">Лапландская сказка</a></div>
+                        <div class="news__date">31.12.09</div>	<a href="kino_lapland.html" class="news__title">Лапландская сказка</a></div>
                         <div class="news__item">
-                        <div class="news__date">26.11.09</div>	<a href="#" class="news__title">Общий 2010</a></div>
+                        <div class="news__date">26.11.09</div>	<a href="2010_all.html" class="news__title">Общий 2010</a></div>
                         <div class="news__item">
-                        <div class="news__date">18.09.09</div>	<a href="#" class="news__title">Финская водичка</a></div>
+                        <div class="news__date">18.09.09</div>	<a href="finland_vesi.html" class="news__title">Финская водичка</a></div>
                         <div class="news__item">
-                        <div class="news__date">17.09.09</div>	<a href="#" class="news__title">Чемпионат КХЛ 2009-2010</a></div>
+                        <div class="news__date">17.09.09</div>	<a href="khl_2009-2010.html" class="news__title">Чемпионат КХЛ 2009-2010</a></div>
                         <div class="news__item">
-                        <div class="news__date">28.08.09</div>	<a href="#" class="news__title">Альмутен Счастья</a></div>
+                        <div class="news__date">28.08.09</div>	<a href="almuten_fortune.html" class="news__title">Альмутен Счастья</a></div>
                         <div class="news__item">
-                        <div class="news__date">28.08.09</div>	<a href="#" class="news__title">Альмутен гороскопа</a></div>
+                        <div class="news__date">28.08.09</div>	<a href="almuten_ibn_ezra.html" class="news__title">Альмутен гороскопа</a></div>
                         <div class="news__item">
-                        <div class="news__date">22.08.09</div>	<a href="#" class="news__title">ЧП на Саяно-Шушенской ГЭС</a></div>
+                        <div class="news__date">22.08.09</div>	<a href="sayano_shushenskaya_wp.html" class="news__title">ЧП на Саяно-Шушенской ГЭС</a></div>
                         <div class="news__item">
-                        <div class="news__date">25.07.09</div>	<a href="#" class="news__title">Гороскоп Беларуси</a></div>
+                        <div class="news__date">25.07.09</div>	<a href="belorussia.html" class="news__title">Гороскоп Беларуси</a></div>
                         <div class="news__item">
-                        <div class="news__date">13.07.09</div>	<a href="#" class="news__title">Гороскопы Джеймса Кука</a></div>
+                        <div class="news__date">13.07.09</div>	<a href="james_cook.html" class="news__title">Гороскопы Джеймса Кука</a></div>
                         <div class="news__item">
-                        <div class="news__date">7.07.09</div>	<a href="#" class="news__title">7 смертных грехов</a></div>
+                        <div class="news__date">7.07.09</div>	<a href="7_grehov.html" class="news__title">7 смертных грехов</a></div>
                         <div class="news__item">
-                        <div class="news__date">19.04.09</div>	<a href="#" class="news__title">Знакомство с Йонасом</a></div>
+                        <div class="news__date">19.04.09</div>	<a href="jonas.html" class="news__title">Знакомство с Йонасом</a></div>
                         <div class="news__item">
-                        <div class="news__date">18.04.09</div>	<a href="#" class="news__title">Ванга о городах</a></div>
+                        <div class="news__date">18.04.09</div>	<a href="vanga_goroda.html" class="news__title">Ванга о городах</a></div>
                         <div class="news__item">
-                        <div class="news__date">12.04.09</div>	<a href="#" class="news__title">Прогноз ЧР по футболу 2009</a></div>
+                        <div class="news__date">12.04.09</div>	<a href="russia_football_2009.html" class="news__title">Прогноз ЧР по футболу 2009</a></div>
                         <div class="news__item">
-                        <div class="news__date">9.04.09</div>	<a href="#" class="news__title">Зачатие и астрология</a></div>
+                        <div class="news__date">9.04.09</div>	<a href="fertility.html" class="news__title">Зачатие и астрология</a></div>
                         <div class="news__item">
-                        <div class="news__date">7.04.09</div>	<a href="#" class="news__title">Карта Урана</a></div>
+                        <div class="news__date">7.04.09</div>	<a href="uran_map.html" class="news__title">Карта Урана</a></div>
                         <div class="news__item">
-                        <div class="news__date"> 1.04.09</div>	<a href="#" class="news__title">Формула 1 - 2009</a></div>
+                        <div class="news__date"> 1.04.09</div>	<a href="formula_2009.html" class="news__title">Формула 1 - 2009</a></div>
                         <div class="news__item">
-                        <div class="news__date">21.03.09</div>	<a href="#" class="news__title">Сила знаков 2009-10 прогноз</a></div>
+                        <div class="news__date">21.03.09</div>	<a href="sila_znak_2009.html" class="news__title">Сила знаков 2009-10 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">04.02.09</div>	<a href="#" class="news__title">Европа 2009 прогноз</a></div>
+                        <div class="news__date">04.02.09</div>	<a href="europe_2009.html" class="news__title">Европа 2009 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">28.01.09</div>	<a href="#" class="news__title">Зоны Зодиака теория</a></div>
+                        <div class="news__date">28.01.09</div>	<a href="zodiac_zona.html" class="news__title">Зоны Зодиака теория</a></div>
                         <div class="news__item">
-                        <div class="news__date">12.01.09</div>	<a href="#" class="news__title">Гороскоп КХЛ прогноз</a></div>
+                        <div class="news__date">12.01.09</div>	<a href="khl.html" class="news__title">Гороскоп КХЛ прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">1.01.09</div>	<a href="#" class="news__title">Новогоднее-09 от Г.К.</a></div>
+                        <div class="news__date">1.01.09</div>	<a href="krug_ng_2009.html" class="news__title">Новогоднее-09 от Г.К.</a></div>
                         <div class="news__item">
-                        <div class="news__date">26.12.08</div>	<a href="#" class="news__title">Меркурианская СУ триплицитетами</a></div>
+                        <div class="news__date">26.12.08</div>	<a href="lat_planets_tripl.html" class="news__title">Меркурианская СУ триплицитетами</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.12.08</div>	<a href="#" class="news__title">Мнимая Луна. Практика</a></div>
+                        <div class="news__date">16.12.08</div>	<a href="black_moon_practice.html" class="news__title">Мнимая Луна. Практика</a></div>
                         <div class="news__item">
-                        <div class="news__date">9.12.08</div>	<a href="#" class="news__title">День французского кино этюд</a></div>
+                        <div class="news__date">9.12.08</div>	<a href="kino_france_1day.html" class="news__title">День французского кино этюд</a></div>
                         <div class="news__item">
-                        <div class="news__date">3.12.08</div>	<a href="#" class="news__title">Парацельс биография</a></div>
+                        <div class="news__date">3.12.08</div>	<a href="paracelse.html" class="news__title">Парацельс биография</a></div>
                         <div class="news__item">
-                        <div class="news__date">2.12.08</div>	<a href="#" class="news__title">Широты и чувства планет</a></div>
+                        <div class="news__date">2.12.08</div>	<a href="lat_planets.html" class="news__title">Широты и чувства планет</a></div>
                         <div class="news__item">
-                        <div class="news__date"> 1.12.08</div>	<a href="#" class="news__title">Общий 2009  астропрогноз</a></div>
+                        <div class="news__date"> 1.12.08</div>	<a href="2009_all.html" class="news__title">Общий 2009  астропрогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.10.08</div>	<a href="#" class="news__title">Вит.Кличко - С.Питер прогноз</a></div>
+                        <div class="news__date">11.10.08</div>	<a href="piter_vit_klitchko.html" class="news__title">Вит.Кличко - С.Питер прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">28.09.08</div>	<a href="#" class="news__title">Кавказ 2008 юмор, фотоотчёт</a></div>
+                        <div class="news__date">28.09.08</div>	<a href="kavkaz_2008.html" class="news__title">Кавказ 2008 юмор, фотоотчёт</a></div>
                         <div class="news__item">
-                        <div class="news__date">28.09.08</div>	<a href="#" class="news__title">Шурик нашёлся хорарный этюд</a></div>
+                        <div class="news__date">28.09.08</div>	<a href="cat.html" class="news__title">Шурик нашёлся хорарный этюд</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.08.08</div>	<a href="#" class="news__title">Южная Осетия  прогноз</a></div>
+                        <div class="news__date">11.08.08</div>	<a href="south_ossetia.html" class="news__title">Южная Осетия  прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">05.07.08</div>	<a href="#" class="news__title">ЕВРО 2008  анализ прогноза</a></div>
+                        <div class="news__date">05.07.08</div>	<a href="euro_2008_analysis.html" class="news__title">ЕВРО 2008  анализ прогноза</a></div>
                         <div class="news__item">
-                        <div class="news__date">09.06.08</div>	<a href="#" class="news__title">Испания, Мальорка  АКГ-рассказ</a></div>
+                        <div class="news__date">09.06.08</div>	<a href="spaine_mallorca.html" class="news__title">Испания, Мальорка  АКГ-рассказ</a></div>
                         <div class="news__item">
-                        <div class="news__date">07.06.08</div>	<a href="#" class="news__title">Евро 2008  прогноз</a></div>
+                        <div class="news__date">07.06.08</div>	<a href="EURO_2008.html" class="news__title">Евро 2008  прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">25.04.08</div>	<a href="#" class="news__title">Формула 1 2008 прогноз</a></div>
+                        <div class="news__date">25.04.08</div>	<a href="F1_2008.html" class="news__title">Формула 1 2008 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">19.04.08</div>	<a href="#" class="news__title">Астротрейдеры интервью</a></div>
+                        <div class="news__date">19.04.08</div>	<a href="astrolometria.html" class="news__title">Астротрейдеры интервью</a></div>
                         <div class="news__item">
-                        <div class="news__date">23.03.08</div>	<a href="#" class="news__title">Сила Знаков 2008-9 прогноз</a></div>
+                        <div class="news__date">23.03.08</div>	<a href="sila_znak_2008.html" class="news__title">Сила Знаков 2008-9 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">23.03.08</div>	<a href="#" class="news__title">ЧР по футболу 2008</a></div>
+                        <div class="news__date">23.03.08</div>	<a href="EURO_2008.html" class="news__title">ЧР по футболу 2008</a></div>
                         <div class="news__item">
-                        <div class="news__date">8.03.08</div>	<a href="#" class="news__title">Маскаев - Питер прогноз</a></div>
+                        <div class="news__date">8.03.08</div>	<a href="maskaev_peter.html" class="news__title">Маскаев - Питер прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">1.03.08</div>	<a href="#" class="news__title">Вимшоттари и Отбалды-даши -2</a></div>
+                        <div class="news__date">1.03.08</div>	<a href="vimshottari_2.html" class="news__title">Вимшоттари и Отбалды-даши -2</a></div>
                         <div class="news__item">
-                        <div class="news__date">17.02.08</div>	<a href="#" class="news__title">Научный атеизм картина маслом</a></div>
+                        <div class="news__date">17.02.08</div>	<a href="nauka_ateism.html" class="news__title">Научный атеизм картина маслом</a></div>
                         <div class="news__item">
-                        <div class="news__date">7.01.08</div>	<a href="#" class="news__title">Вимшоттари и Отбалды-даши</a></div>
+                        <div class="news__date">7.01.08</div>	<a href="vimshottari.html" class="news__title">Вимшоттари и Отбалды-даши</a></div>
                         <div class="news__item">
-                        <div class="news__date">25.12.07</div>	<a href="#" class="news__title">Новогоднее от Г.К.</a></div>
+                        <div class="news__date">25.12.07</div>	<a href="krug_ng2008.html" class="news__title">Новогоднее от Г.К.</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.12.07</div>	<a href="#" class="news__title">Ю.Семин в ДК обзор гороскопа</a></div>
+                        <div class="news__date">16.12.07</div>	<a href="juri_semin.html" class="news__title">Ю.Семин в ДК обзор гороскопа</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.12.07</div>	<a href="#" class="news__title">Г.Хиддинк - РФС гороскоп</a></div>
+                        <div class="news__date">16.12.07</div>	<a href="gus_hiddink.html" class="news__title">Г.Хиддинк - РФС гороскоп</a></div>
                         <div class="news__item">
-                        <div class="news__date">13.12.07</div>	<a href="#" class="news__title">обновлены Е.Сусеки</a></div>
+                        <div class="news__date">13.12.07</div>	<a href="e-suseki.html" class="news__title">обновлены Е.Сусеки</a></div>
                         <div class="news__item">
-                        <div class="news__date">03.12.07</div>	<a href="#" class="news__title">Общий 2008</a></div>
+                        <div class="news__date">03.12.07</div>	<a href="2008_all.html" class="news__title">Общий 2008</a></div>
                         <div class="news__item">
-                        <div class="news__date">13.11.07</div>	<a href="#" class="news__title">статья Президенты Финляндии</a></div>
+                        <div class="news__date">13.11.07</div>	<a href="finland_presidents.html" class="news__title">статья Президенты Финляндии</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.10.07</div>	<a href="#" class="news__title">Россия-Англия анализ игры</a></div>
+                        <div class="news__date">16.10.07</div>	<a href="russia_england.html" class="news__title">Россия-Англия анализ игры</a></div>
                         <div class="news__item">
-                        <div class="news__date">20.09.07</div>	<a href="#" class="news__title">Космический статус весь текст</a></div>
+                        <div class="news__date">20.09.07</div>	<a href="kosmos_status.html" class="news__title">Космический статус весь текст</a></div>
                         <div class="news__item">
-                        <div class="news__date">5.08.07</div>	<a href="#" class="news__title">Юрмала КВН 2007 отклик</a></div>
+                        <div class="news__date">5.08.07</div>	<a href="jurmala_2007.html" class="news__title">Юрмала КВН 2007 отклик</a></div>
                         <div class="news__item">
-                        <div class="news__date">7.07.07</div>	<a href="#" class="news__title">Вл.Кличко-Брюстер 2007 прогноз</a></div>
+                        <div class="news__date">7.07.07</div>	<a href="vl_klichko_bryster_2007.html" class="news__title">Вл.Кличко-Брюстер 2007 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">30.05.07</div>	<a href="#" class="news__title">Интервью с В.Ажажа</a></div>
+                        <div class="news__date">30.05.07</div>	<a href="nlo_view.html" class="news__title">Интервью с В.Ажажа</a></div>
                         <div class="news__item">
-                        <div class="news__date">17.05.07</div>	<a href="#" class="news__title">300 спартаковцев юмор, спорт</a></div>
+                        <div class="news__date">17.05.07</div>	<a href="300_spartak.html" class="news__title">300 спартаковцев юмор, спорт</a></div>
                         <div class="news__item">
-                        <div class="news__date">9.05.07</div>	<a href="#" class="news__title">Совместимость сервис на сайте</a></div>
+                        <div class="news__date">9.05.07</div>	<a href="sinastry.html" class="news__title">Совместимость сервис на сайте</a></div>
                         <div class="news__item">
-                        <div class="news__date">5.05.07</div>	<a href="#" class="news__title">Астрономия vs Астрология юмор</a></div>
+                        <div class="news__date">5.05.07</div>	<a href="astro_astro.html" class="news__title">Астрономия vs Астрология юмор</a></div>
                         <div class="news__item">
-                        <div class="news__date">3.05.07</div>	<a href="#" class="news__title">Мейвезер-Де Ла Хойя прогноз</a></div>
+                        <div class="news__date">3.05.07</div>	<a href="mayweather_oskar_dl_hoya.html" class="news__title">Мейвезер-Де Ла Хойя прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">26.04.07</div>	<a href="#" class="news__title">ЧМ по хоккею 2007 прогноз</a></div>
+                        <div class="news__date">26.04.07</div>	<a href="hockey_2007.html" class="news__title">ЧМ по хоккею 2007 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">18.04.07</div>	<a href="#" class="news__title">Принципы С.Бизун</a></div>
+                        <div class="news__date">18.04.07</div>	<a href="princip_astrology.html" class="news__title">Принципы С.Бизун</a></div>
                         <div class="news__item">
-                        <div class="news__date">1.04.07</div>	<a href="#" class="news__title">Финляндия F1-2007 прогноз</a></div>
+                        <div class="news__date">1.04.07</div>	<a href="formula1.html" class="news__title">Финляндия F1-2007 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">21.03.07</div>	<a href="#" class="news__title">Сила Знаков 2007-8 прогноз</a></div>
+                        <div class="news__date">21.03.07</div>	<a href="sila_znak_2007.html" class="news__title">Сила Знаков 2007-8 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">10.03.07</div>	<a href="#" class="news__title">ЧР по футболу 2007 прогноз</a></div>
+                        <div class="news__date">10.03.07</div>	<a href="russia_futball_2007.html" class="news__title">ЧР по футболу 2007 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">19.02.07</div>	<a href="#" class="news__title">Шевченко и "Челси" обзор</a></div>
+                        <div class="news__date">19.02.07</div>	<a href="shevchenko_chelsea.html" class="news__title">Шевченко и "Челси" обзор</a></div>
                         <div class="news__item">
-                        <div class="news__date">20.01.07</div>	<a href="#" class="news__title">Валуев-Маклайн прогноз</a></div>
+                        <div class="news__date">20.01.07</div>	<a href="valuev_mcline.html" class="news__title">Валуев-Маклайн прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">10.12.06</div>	<a href="#" class="news__title">Маскаев-Охелло прогноз</a></div>
+                        <div class="news__date">10.12.06</div>	<a href="maskaev_okhello.html" class="news__title">Маскаев-Охелло прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">7.12.06</div>	<a href="#" class="news__title">2007 - год Кабана и Панголина прогноз, И.Палагина</a></div>
+                        <div class="news__date">7.12.06</div>	<a href="2007_kaban_pangolin.html" class="news__title">2007 - год Кабана и Панголина прогноз, И.Палагина</a></div>
                         <div class="news__item">
-                        <div class="news__date">7.12.06</div>	<a href="#" class="news__title">Общий 2007 прогноз</a></div>
+                        <div class="news__date">7.12.06</div>	<a href="2007_all.html" class="news__title">Общий 2007 прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">23.11.06</div>	<a href="#" class="news__title">Ирония судьбы  "Редкие судьбы"</a></div>
+                        <div class="news__date">23.11.06</div>	<a href="unique_destiny_2.html" class="news__title">Ирония судьбы  "Редкие судьбы"</a></div>
                         <div class="news__item">
-                        <div class="news__date">17.11.06</div>	<a href="#" class="news__title">Сотрудничество с сайтом demandi.ru</a></div>
+                        <div class="news__date">17.11.06</div>	<a href="demandi.ru" class="news__title">Сотрудничество с сайтом demandi.ru</a></div>
                         <div class="news__item">
-                        <div class="news__date">19.10.06</div>	<a href="#" class="news__title">Финское кино. Записки</a></div>
+                        <div class="news__date">19.10.06</div>	<a href="kino.html" class="news__title">Финское кино. Записки</a></div>
                         <div class="news__item">
-                        <div class="news__date">2.10.06</div>	<a href="#" class="news__title">Планеты и наследственность Дж. А. Инек</a></div>
+                        <div class="news__date">2.10.06</div>	<a href="goklens_allen.html" class="news__title">Планеты и наследственность Дж. А. Инек</a></div>
                         <div class="news__item">
-                        <div class="news__date">24.09.06</div>	<a href="#" class="news__title">Чёрная (Мнимая) Луна исследование, трактовка</a></div>
+                        <div class="news__date">24.09.06</div>	<a href="black_imaginary_moon_teoria.html" class="news__title">Чёрная (Мнимая) Луна исследование, трактовка</a></div>
                         <div class="news__item">
-                        <div class="news__date">18.09.06</div>	<a href="#" class="news__title">Астролометрия П.Г.Курочкин</a></div>
+                        <div class="news__date">18.09.06</div>	<a href="astrolometria.html" class="news__title">Астролометрия П.Г.Курочкин</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.09.06</div>	<a href="#" class="news__title">ЛЧ Спартак-Бавария прогноз</a></div>
+                        <div class="news__date">11.09.06</div>	<a href="mars_football.html" class="news__title">ЛЧ Спартак-Бавария прогноз</a></div>
                         <div class="news__item">
-                        <div class="news__date">25.08.06</div>	<a href="#" class="news__title">Популярная астрология обзор</a></div>
+                        <div class="news__date">25.08.06</div>	<a href="popular_astrology.html" class="news__title">Популярная астрология обзор</a></div>
                         <div class="news__item">
-                        <div class="news__date">24.08.06</div>	<a href="#" class="news__title">Астропревед юмор</a></div>
+                        <div class="news__date">24.08.06</div>	<a href="astro_preved.html" class="news__title">Астропревед юмор</a></div>
                         <div class="news__item">
-                        <div class="news__date">14.08.06</div>	<a href="#" class="news__title">Редкие судьбы №1 исследование</a></div>
+                        <div class="news__date">14.08.06</div>	<a href="unique_destiny_1.html" class="news__title">Редкие судьбы №1 исследование</a></div>
                         <div class="news__item">
-                        <div class="news__date">11.08.06</div>	<a href="#" class="news__title">Маскаев - Рахман</a></div>
+                        <div class="news__date">11.08.06</div>	<a href="maskaev_rahman.html" class="news__title">Маскаев - Рахман</a></div>
                         <div class="news__item">
-                        <div class="news__date">30.07.06</div>	<a href="#" class="news__title">Юрмала и КВН 2006</a></div>
+                        <div class="news__date">30.07.06</div>	<a href="jurmala_2006.html" class="news__title">Юрмала и КВН 2006</a></div>
                         <div class="news__item">
-                        <div class="news__date">16.07.06</div>	<a href="#" class="news__title">Чёрная Луна. История</a></div>
+                        <div class="news__date">16.07.06</div>	<a href="black_moon.html" class="news__title">Чёрная Луна. История</a></div>
                         <div class="news__item">
-                       <div class="news__date">22.04.06</div>	<a href="#" class="news__title">В.Кличко - Крис Бёрд</a></div>
+                       <div class="news__date">22.04.06</div>	<a href="klichko_byrd.html" class="news__title">В.Кличко - Крис Бёрд</a></div>
                     </div>
-                    <div class="all-news"><span>--- вся </span><a href="#">хроника новостей</a></div>
+                    <div class="all-news"><span>--- вся </span><a href="novosti.html">хроника новостей</a></div>
                 </div>
             </div>
             
@@ -603,25 +610,25 @@
             <div class="footer__img"><a href="http://astrolocator.com/"><img src="images/footer/log_zem.png" alt=""></a></div>
             <div class="footer_content">
                 <div class="footer__nav">
-                    <a href="http://www.liveastrology.org/news.htm" class="footer__item">библиотека</a>
+                    <a href="news.html" class="footer__item">библиотека</a>
                     <a href="http://liveastrology.borda.ru/" class="footer__item">форум</a>
-                    <a href="http://www.liveastrology.org/hor_online.htm" class="footer__item">гороскоп online</a>
-                    <a href="http://www.liveastrology.org/astronomy.htm" class="footer__item">астрономия</a>
-                    <a href="http://www.liveastrology.org/Sport.htm" class="footer__item">спорт</a>
-                    <a href="http://www.liveastrology.org/luna.htm" class="footer__item">луна online</a>
-                    <a href="http://www.liveastrology.org/feedback.htm" class="footer__item">о проекте</a>
-                    <a href="http://www.liveastrology.org/konsult.htm" class="footer__item">консультации</a>
+                    <a href="hor_online.html" class="footer__item">гороскоп online</a>
+                    <a href="astronomy.html" class="footer__item">астрономия</a>
+                    <a href="Sport.html" class="footer__item">спорт</a>
+                    <a href="luna.html" class="footer__item">луна online</a>
+                    <a href="feedback.html" class="footer__item">о проекте</a>
+                    <a href="konsult.html" class="footer__item">консультации</a>
                 </div>
                 <div class="footer__links">
-                    <a href="http://www.liveastrology.org/links.htm" class="footer__link">ссылки</a>
-                    <a href="http://www.liveastrology.org/pravila_copy.htm" class="footer__link">условия копирования</a>
-                    <a href="http://www.liveastrology.org/friends.htm" class="footer__link">друзья сайта</a>
-                    <a href="http://www.liveastrology.org/reklama_mainos.htm" class="footer__link">о рекламе</a>
-                    <a href="http://www.liveastrology.org/lv.htm" class="footer__link">lv</a>
-                    <a href="http://www.liveastrology.org/it.htm" class="footer__link">it</a>
-                    <a href="http://www.liveastrology.org/en.htm" class="footer__link">en</a>
-                    <a href="http://www.liveastrology.org/ge.htm" class="footer__link">ge</a>
-                    <a href="http://www.liveastrology.org/y_information.htm" class="footer__link">справочная</a>
+                    <a href="links.html" class="footer__link">ссылки</a>
+                    <a href="pravila_copy.html" class="footer__link">условия копирования</a>
+                    <a href="friends.html" class="footer__link">друзья сайта</a>
+                    <a href="reklama_mainos.html" class="footer__link">о рекламе</a>
+                    <a href="lv.html" class="footer__link">lv</a>
+                    <a href="it.html" class="footer__link">it</a>
+                    <a href="en.html" class="footer__link">en</a>
+                    <a href="ge.html" class="footer__link">ge</a>
+                    <a href="y_information.html" class="footer__link">справочная</a>
                 </div>
                 <div class="footer__resources">
                     <a href="https://www.sunhome.ru/" class="footer__res"><img src="http://www.sunhome.ru/counter.php?id=80" alt=""></a>
